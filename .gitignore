@@ -29,4 +29,6 @@ replay_pid*
 *.iws
 **/logs/
 **/libs/
-**/target
+./bin/*
+./plugins/*
+**/target/*
