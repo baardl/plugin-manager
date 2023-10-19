@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>no.baardl.plugins</groupId>
+    <artifactId>plugin-manager</artifactId>
+    <version>0.1.1-SNAPSHOT</version>
+    <name>parent-project</name>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <modules>
+        <module>plugin-typelib</module>
+        <module>plugin-application</module>
+        <module>csv-plugin</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--TEST -->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>5.10.0</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.skyscreamer</groupId>
+                <artifactId>jsonassert</artifactId>
+                <version>1.5.1</version>
+                <scope>test</scope>
+            </dependency>
+            <!--
+            <dependency>
+              <groupId>org.mock-server</groupId>
+              <artifactId>mockserver-junit-jupiter-no-dependencies</artifactId>
+              <version>5.15.0</version>
+              <scope>test</scope>
+            </dependency>
+            <dependency>
+              <groupId>org.mock-server</groupId>
+              <artifactId>mockserver-client-java</artifactId>
+              <version>${mockserver.version}</version>
+              <scope>test</scope>
+            </dependency>
+            -->
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>5.5.0</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
